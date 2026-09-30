@@ -11,7 +11,10 @@ class FooterSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      color: isDark ? Colors.grey.shade900 : Colors.blueGrey.shade50, // Background color based on theme
+      color:
+          isDark
+              ? Colors.grey.shade900
+              : Colors.blueGrey.shade50, // Background color based on theme
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -24,7 +27,12 @@ class FooterSection extends StatelessWidget {
                 child: Text(
                   'Home',
                   style: TextStyle(
-                    color: isDark ? Colors.white : Colors.blueGrey.shade700, // Button text color based on theme
+                    color:
+                        isDark
+                            ? Colors.white
+                            : Colors
+                                .blueGrey
+                                .shade700, // Button text color based on theme
                   ),
                 ),
               ),
@@ -59,9 +67,12 @@ class FooterSection extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            '© Anit Pal $year. All rights reserved.',
+            '© Parth Chudasama $year. All rights reserved.',
             style: TextStyle(
-              color: isDark ? Colors.white70 : Colors.black54, // Text color based on theme
+              color:
+                  isDark
+                      ? Colors.white70
+                      : Colors.black54, // Text color based on theme
               fontSize: 14,
             ),
             textAlign: TextAlign.center,

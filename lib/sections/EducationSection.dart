@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class EducationSection extends StatelessWidget {
@@ -34,11 +34,12 @@ class EducationSection extends StatelessWidget {
 
           _educationCard(
             context: context,
-            title: 'B.Tech in Computer Science',
-            institution: 'Quantum University',
-            location: ' Roorkee, Uttarakhand 247167',
-            duration: '2022 – 2026',
-            description: 'Learned software development, data structures, and AI.',
+            title: 'B.E in Information Technology',
+            institution: 'Gujarat Technological University',
+            location: 'Bhavnagar , Gujarat',
+            duration: '2023 – 2027',
+            description:
+                'Learned software development, data structures, and AI.',
             lightColor: Colors.blue.shade50,
             darkColor: Colors.blueGrey.shade800,
           ),
@@ -48,46 +49,15 @@ class EducationSection extends StatelessWidget {
           _educationCard(
             context: context,
             title: '12th (Senior Secondary - PCM)',
-            institution: 'Rajesh Pilot Inter College',
-            location: 'SADHOLI BHOOD SAHARANPUR',
-            duration: '2019 – 2021',
+            institution: 'M.D.SHAH Vidhyalaya',
+            location: 'Botad , Gujarat',
+            duration: '2020 – 2022',
             description: 'Studied Physics, Chemistry, Mathematics .',
             lightColor: Colors.green.shade50,
             darkColor: Colors.green.shade800,
           ),
 
           const SizedBox(height: 40),
-
-          Text(
-            'Certificates',
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: isDark ? Colors.white : Colors.black,
-            ),
-          ),
-          const SizedBox(height: 20),
-
-          _certificateCard(
-            context: context,
-            title: 'Flutter Development Bootcamp',
-            platform: 'Udemy',
-            date: 'Jan 2024',
-            url: 'https://example.com/flutter-cert',
-            lightColor: Colors.purple.shade50,
-            darkColor: Colors.purple.shade800,
-          ),
-
-          const SizedBox(height: 20),
-
-          _certificateCard(
-            context: context,
-            title: 'Machine Learning by Stanford',
-            platform: 'Coursera',
-            date: 'Aug 2023',
-            url: 'https://example.com/ml-cert',
-            lightColor: Colors.orange.shade50,
-            darkColor: Colors.orange.shade800,
-          ),
         ],
       ),
     );
@@ -119,7 +89,7 @@ class EducationSection extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(LucideIcons.graduationCap, color: textColor),
+                Icon(Icons.campaign_sharp, color: textColor),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
@@ -139,15 +109,9 @@ class EducationSection extends StatelessWidget {
               style: TextStyle(fontSize: 14, color: subTextColor),
             ),
             const SizedBox(height: 4),
-            Text(
-              duration,
-              style: TextStyle(fontSize: 13, color: subTextColor),
-            ),
+            Text(duration, style: TextStyle(fontSize: 13, color: subTextColor)),
             const SizedBox(height: 10),
-            Text(
-              description,
-              style: TextStyle(fontSize: 14, color: textColor),
-            ),
+            Text(description, style: TextStyle(fontSize: 14, color: textColor)),
           ],
         ),
       ),
@@ -178,7 +142,7 @@ class EducationSection extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(LucideIcons.badgeCheck, color: textColor),
+                Icon(Icons.import_contacts, color: textColor),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(

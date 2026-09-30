@@ -18,12 +18,12 @@ class ContactSection extends StatelessWidget {
           const ContactTile(
             icon: Icons.email,
             title: 'Email',
-            subtitle: 'your.email@example.com',
+            subtitle: 'pmchudasama.0210@gmail.com',
           ),
           const ContactTile(
             icon: Icons.phone,
             title: 'Phone',
-            subtitle: '+91 98765 43210',
+            subtitle: '+91 9016938751',
           ),
           const ContactTile(
             icon: Icons.language,
@@ -33,7 +33,7 @@ class ContactSection extends StatelessWidget {
           const ContactTile(
             icon: Icons.location_on,
             title: 'Location',
-            subtitle: 'Delhi, India',
+            subtitle: 'Botad , Gujarat',
           ),
         ],
       ),
@@ -62,23 +62,25 @@ class ContactTile extends StatelessWidget {
         children: [
           Icon(icon, size: 28, color: isDark ? Colors.white : Colors.indigo),
           const SizedBox(width: 16),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: isDark ? Colors.white : Colors.black,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
                 ),
-              ),
-              Text(
-                subtitle,
-                style: TextStyle(
-                  color: isDark ? Colors.white70 : Colors.black54,
+                Text(
+                  subtitle,
+                  style: TextStyle(
+                    color: isDark ? Colors.white70 : Colors.black54,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

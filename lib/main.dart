@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'sections/home_section.dart';
 
 void main() {
@@ -18,30 +19,52 @@ class _MyAppState extends State<MyApp> {
   void _toggleTheme() {
     setState(() {
       _themeMode =
-      _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+          _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final lightTheme = _buildTheme(Brightness.light);
+    final darkTheme = _buildTheme(Brightness.dark);
+
     return MaterialApp(
       title: 'My Portfolio',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.indigo,
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.indigo,
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       themeMode: _themeMode,
-      home: HomeSection(
-        themeMode: _themeMode,
-        toggleTheme: _toggleTheme,
-      ),
+      home: HomeSection(themeMode: _themeMode, toggleTheme: _toggleTheme),
     );
   }
+}
+
+ThemeData _buildTheme(Brightness brightness) {
+  final theme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: Colors.teal,
+      brightness: brightness,
+    ),
+    useMaterial3: true,
+  );
+  final textTheme = GoogleFonts.manropeTextTheme(theme.textTheme);
+
+  return theme.copyWith(
+    textTheme: textTheme.copyWith(
+      displayLarge: GoogleFonts.spaceGrotesk(textStyle: textTheme.displayLarge),
+      displayMedium: GoogleFonts.spaceGrotesk(
+        textStyle: textTheme.displayMedium,
+      ),
+      displaySmall: GoogleFonts.spaceGrotesk(textStyle: textTheme.displaySmall),
+      headlineLarge: GoogleFonts.spaceGrotesk(
+        textStyle: textTheme.headlineLarge,
+      ),
+      headlineMedium: GoogleFonts.spaceGrotesk(
+        textStyle: textTheme.headlineMedium,
+      ),
+      headlineSmall: GoogleFonts.spaceGrotesk(
+        textStyle: textTheme.headlineSmall,
+      ),
+    ),
+  );
 }
