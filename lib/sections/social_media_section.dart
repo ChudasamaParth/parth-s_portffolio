@@ -24,22 +24,34 @@ class SocialMediaSection extends StatelessWidget {
         IconButton(
           icon: const FaIcon(FontAwesomeIcons.github, color: Colors.black),
           iconSize: iconSize,
-          onPressed: () => _launchURL('https://github.com/anit3734'),
+          onPressed: () => _launchURL('https://github.com/ChudasamaParth'),
         ),
         IconButton(
-          icon: const FaIcon(FontAwesomeIcons.linkedin,  color: Color(0xFF0A66C2)),
+          icon: const FaIcon(
+            FontAwesomeIcons.linkedin,
+            color: Color(0xFF0A66C2),
+          ),
           iconSize: iconSize,
-          onPressed: () => _launchURL('https://www.linkedin.com/in/anit-pal'),
+          onPressed:
+              () => _launchURL(
+                'https://www.linkedin.com/in/parth-chudasama-728621315/?isSelfProfile=true',
+              ),
         ),
         IconButton(
           icon: const FaIcon(FontAwesomeIcons.x, color: Color(0xFF1DA1F2)),
           iconSize: iconSize,
-          onPressed: () => _launchURL('https://x.com/AnitPal3734?t=S6oqtuYcAsQKX4a69jqcaw&s=09'),
+          onPressed: () => _launchURL('https://x.com/ParthChuda38944'),
         ),
         IconButton(
-          icon: const FaIcon(FontAwesomeIcons.instagram, color: Color(0xFFC13584)),
+          icon: const FaIcon(
+            FontAwesomeIcons.instagram,
+            color: Color(0xFFC13584),
+          ),
           iconSize: iconSize,
-          onPressed: () => _launchURL('https://www.instagram.com/aniiitt_pal?igsh=OXA5OXZ6M3NodTA0'),
+          onPressed:
+              () => _launchURL(
+                'https://www.instagram.com/02___parth__?stkn=MTBjdXRlaTU3bXdzeA==',
+              ),
         ),
       ],
     );
