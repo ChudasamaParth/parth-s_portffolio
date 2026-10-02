@@ -38,9 +38,13 @@ class SocialMediaSection extends StatelessWidget {
               ),
         ),
         IconButton(
-          icon: const FaIcon(FontAwesomeIcons.x, color: Color(0xFF1DA1F2)),
+          icon: const FaIcon(
+            FontAwesomeIcons.leetcode,
+            color: Color(0xFF1DA1F2),
+          ),
           iconSize: iconSize,
-          onPressed: () => _launchURL('https://x.com/ParthChuda38944'),
+          onPressed:
+              () => _launchURL('https://leetcode.com/u/Parth_Chudasama0210/'),
         ),
         IconButton(
           icon: const FaIcon(

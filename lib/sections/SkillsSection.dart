@@ -6,6 +6,10 @@ class SkillsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color gitColor =
+        Theme.of(context).brightness == Brightness.dark
+            ? Colors.white
+            : Colors.black;
     final skills = [
       {
         'name': 'Flutter',
@@ -27,11 +31,7 @@ class SkillsSection extends StatelessWidget {
         'icon': FontAwesomeIcons.gitAlt,
         'color': Colors.deepOrange,
       },
-      {
-        'name': 'GitHub',
-        'icon': FontAwesomeIcons.github,
-        'color': const Color.fromARGB(255, 249, 247, 247),
-      },
+      {'name': 'GitHub', 'icon': FontAwesomeIcons.github, 'color': gitColor},
       {'name': 'Figma', 'icon': FontAwesomeIcons.figma, 'color': Colors.purple},
       {
         'name': 'HTML',
