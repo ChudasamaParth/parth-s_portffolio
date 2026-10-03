@@ -53,6 +53,11 @@ class SkillsSection extends StatelessWidget {
         'icon': FontAwesomeIcons.python,
         'color': Colors.green,
       },
+      {
+        'name': 'Node JS',
+        'icon': FontAwesomeIcons.nodeJs,
+        'color': Colors.grey,
+      },
     ];
 
     return Container(

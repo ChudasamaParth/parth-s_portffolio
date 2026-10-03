@@ -18,11 +18,16 @@ class SocialMediaSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color Colorss =
+        Theme.of(context).brightness == Brightness.dark
+            ? Colors.white
+            : Colors.black;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: const FaIcon(FontAwesomeIcons.github, color: Colors.black),
+          icon: FaIcon(FontAwesomeIcons.github, color: Colorss),
           iconSize: iconSize,
           onPressed: () => _launchURL('https://github.com/ChudasamaParth'),
         ),

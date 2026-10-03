@@ -20,7 +20,7 @@ class HomeSection extends StatelessWidget {
 
   Future<void> _downloadCV() async {
     final url =
-        'https://drive.google.com/file/d/14DeLtvZTiS3Xjc5lyHyqguexkHzuEGZu/view?usp=drive_link'; // replace with your actual CV URL
+        'https://drive.google.com/file/d/15qTi1otf-LxbTQ1caD-kKuLanJpvmZFT/view?usp=drive_link'; // replace with your actual CV URL
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
